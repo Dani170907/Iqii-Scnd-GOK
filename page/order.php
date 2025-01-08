@@ -27,8 +27,8 @@ $customerCode = $char . sprintf("%03s", $serialNumber);
             <div class="panel-heading">Form Pesanan</div>
             <div class="panel-body">
 
-                <form action="order_process.php" method="post">
-                    <div class="col-md-6">
+            <form action="?p=order_process" method="post">  
+                <div class="col-md-6">
                         <div class="form-group">
                             <label for="">ID Pelanggan</label>
                             <input type="text" name="customerId" class="form-control" readonly="readonly" value="<?= $customerCode ?>">
@@ -124,7 +124,7 @@ $customerCode = $char . sprintf("%03s", $serialNumber);
                                         confirmButtonText: 'OK'
                                     }).then((result) => {
                                         if (result.isConfirmed) {
-                                            window.location.href = "?p=order";
+                                            window.location.href = "?p= order";
                                         }
                                     });
                                 </script>
